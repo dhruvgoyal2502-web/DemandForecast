@@ -6,7 +6,7 @@ st.set_page_config(page_title="Dataset Overview", page_icon="📊", layout="wide
 
 @st.cache_data
 def load_data():
-    df = pd.read_excel("../UpdatedForecast_Results_Final.xlsx")
+    df = pd.read_excel("pages/UpdatedForecast_Results_Final.xlsx")
     # Convert Forecast to integer to remove decimal points
     df['Forecast'] = df['Forecast'].round(0).astype(int)
     # Ensure Month is datetime
